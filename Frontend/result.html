@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pathfinder – Your Result</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ──────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html">Path<span>finder</span></a>
+    <span class="nav-tagline">Your Result</span>
+  </nav>
+
+  <!-- ── Main content ────────────────────────────────────────── -->
+  <main class="page-wrapper">
+
+    <!-- Error banner -->
+    <p id="error-banner" class="error-banner hidden"></p>
+
+    <!-- Career result ───────────────────────────────────────── -->
+    <header class="result-header">
+      <p class="result-eyebrow">✦ Your ideal career match</p>
+      <h1 id="career-title">Loading…</h1>
+      <p id="career-description"></p>
+      <button id="retake-btn" class="hidden">
+        ↩ Retake the Quiz
+      </button>
+    </header>
+
+    <!-- Roadmap section ─────────────────────────────────────── -->
+    <section id="roadmap-section" class="hidden">
+
+      <h2 class="roadmap-title">Your Learning Roadmap</h2>
+      <p class="roadmap-subtitle">
+        Follow these steps to launch your new career journey.
+      </p>
+
+      <!-- Inline loading spinner -->
+      <div id="roadmap-loading" class="hidden">
+        <div class="spinner-sm"></div>
+        <span>Building your roadmap…</span>
+      </div>
+
+      <!-- Steps list (populated by result.js) -->
+      <ol id="roadmap-list"></ol>
+
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    © 2024 Pathfinder · Start building today.
+  </footer>
+
+  <!-- api.js must load before result.js -->
+  <script src="js/api.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>

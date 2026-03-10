@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pathfinder – Career Quiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ──────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html">Path<span>finder</span></a>
+    <span class="nav-tagline">Career Quiz</span>
+  </nav>
+
+  <!-- ── Loading overlay (shown while fetching questions) ────── -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+    <span class="loading-text">Loading your quiz…</span>
+  </div>
+
+  <!-- ── Main quiz UI ────────────────────────────────────────── -->
+  <main class="page-wrapper">
+
+    <!-- Error banner -->
+    <p id="error-banner" class="error-banner hidden"></p>
+
+    <!-- Progress bar -->
+    <div class="quiz-header">
+      <div class="quiz-meta">
+        <span id="question-counter">Question 1 of 10</span>
+      </div>
+      <div class="progress-track">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Question card -->
+    <div class="question-card">
+      <p id="question-text">Loading question…</p>
+
+      <div class="options-grid">
+        <!-- Yes -->
+        <button class="option-btn" data-value="0">
+          <span class="opt-icon">✅</span>
+          Yes
+        </button>
+        <!-- Sometimes -->
+        <button class="option-btn" data-value="1">
+          <span class="opt-icon">🤔</span>
+          Sometimes
+        </button>
+        <!-- No -->
+        <button class="option-btn" data-value="2">
+          <span class="opt-icon">❌</span>
+          No
+        </button>
+      </div>
+    </div>
+
+    <!-- Submit (only shown on the final question) -->
+    <div id="submit-section" class="hidden">
+      <button id="submit-btn">
+        Get My Career Match ✨
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    © 2024 Pathfinder · Your answers are never stored on our servers.
+  </footer>
+
+  <!-- api.js must load before quiz.js -->
+  <script src="js/api.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
